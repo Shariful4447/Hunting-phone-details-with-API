@@ -12,8 +12,19 @@ const displayPhones = phones => {
     const phoneContainer = document.getElementById('phone-container'); 
 
     // clear the container before next search
-    phoneContainer.textContent=''; 
-
+    phoneContainer.textContent='';
+    
+     // if more product are available then show all button will apear
+     const showAll = document.getElementById('show-all-button');
+     if (phones.length>12) {
+        showAll.classList.remove('hidden');
+     }
+     else{
+        showAll.classList.add('hidden');
+     }
+    // display first 10
+    phones = phones.slice(0,10);
+   
     phones.forEach(phone => {
         console.log(phone);
 

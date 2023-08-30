@@ -15,9 +15,14 @@
 
     <main class="container mx-auto">
         <section class="bg-gray-100 p-5 m-5 text-center">
+           
             <input id="search-field" type="text" placeholder="search ....." class="input input-bordered w-full max-w-xs" />
             <button onclick="handleSearch()" class="btn btn-accent">Search</button>
+         
         </section>
+        <div id="loading-spinner" class="text-2xl text-center my-20 hidden">
+            <span class="loading loading-spinner loading-lg"></span>
+        </div>
         <!-- search result -->
         <section>
             <div class="container grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4" id="phone-container">
